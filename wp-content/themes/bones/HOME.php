@@ -1,6 +1,6 @@
 <?php
 /*
-	Template Name: INICIO
+	Template Name: HOME
 */
 ?>
 
@@ -21,7 +21,7 @@
 
 	<?php echo do_shortcode('[slider id=62 name="indexbanner"]'); ?>
 
-	<?php $my_query = new WP_Query('category_name=automovil'); ?>
+	<?php $my_query = new WP_Query('post_type=vehiculos'); ?>
 
 	<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 	<?php endwhile; ?>

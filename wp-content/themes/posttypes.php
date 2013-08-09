@@ -30,7 +30,7 @@ function vehiculos_init()
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => 4,
-		'supports' => array('title','editor','author','thumbnail','excerpt','comments','custom-fields'),
+		'supports' => array('title','thumbnail'),
 		'has_archive' => 'vehiculos'
 	);
 	register_post_type('vehiculos',$args);

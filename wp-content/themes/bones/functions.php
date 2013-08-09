@@ -76,15 +76,15 @@ you like. Enjoy!
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
-	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'bonestheme'),
-		'description' => __('The first (primary) sidebar.', 'bonestheme'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
+	// register_sidebar(array(
+	// 	'id' => 'sidebar1',
+	// 	'name' => __('Sidebar 1', 'bonestheme'),
+	// 	'description' => __('The first (primary) sidebar.', 'bonestheme'),
+	// 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	// 	'after_widget' => '</div>',
+	// 	'before_title' => '<h4 class="widgettitle">',
+	// 	'after_title' => '</h4>',
+	// ));
 
 	/*
 	to add more sidebars or widgetized areas, just copy
@@ -93,17 +93,17 @@ function bones_register_sidebars() {
 
 	Just change the name to whatever your new
 	sidebar's id is, for example:
-
+*/
 	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __('Sidebar 2', 'bonestheme'),
-		'description' => __('The second (secondary) sidebar.', 'bonestheme'),
+		'id' => 'navwidget',
+		'name' => __('nagevacion automoviles footer', 'navwidget'),
+		'description' => __('imagens que redicreecionas a diferentes menu.', 'navwidget'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-
+/*
 	To call the sidebar in your template, you can just copy
 	the sidebar.php file and rename it to your sidebar's name.
 	So using the above example, it would be:
