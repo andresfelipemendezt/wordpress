@@ -16,12 +16,16 @@
 									<img src="<?php the_field('imagen_header'); ?>" alt="" />
 
 								</header> <!-- end article header -->
+
+								<section class="entry-content clearfix">
+
 								<div class="descripccion">
-
-									<img src="<?php the_field('imagen_descripcion'); ?>" alt="" />
-									<?php the_field('descripccion'); ?>
-
+									<img src="<?php the_field('imagen_descripcion'); ?>" alt="" /><!--
+								 --><div class="descripcioncopy">
+										<?php the_field('descripccion'); ?>
+									</div>
 								</div>
+
 								<div class="galeria">
 									<h1>Galería</h1>
 									<h4>En FIAT encuentras una gran cantidad de colores para que personalices tu vehículo como más te guste. </h4>
@@ -38,63 +42,56 @@
 									 </ul>
 									<?php endif; ?>
 								</div>
-								<section class="entry-content clearfix">
 
-
-								<?php
-								 $images = get_field('carros');
-								 if( $images ): ?>
-								 <ul class="carrocolores">
-									<?php foreach( $images as $image): ?>
+								<div class="coloreswraper">
+									<?php
+									 $images = get_field('carros');
+									 if( $images ): ?>
+									 <ul class="carrocolores">
+										<?php foreach( $images as $image): ?>
+											<li>
+												<img src=" <?php echo $image['url']; ?> " alt="">
+											</li>
+										<?php endforeach; ?>
+									 </ul>
+									<?php endif; ?>
+									<?php
+									$imagenes = get_field('colores');
+									if( $imagenes ): ?>
+									<ul class="carrocolores_colores">
+									<?php 	$index = 0; ?>
+									<?php foreach( $imagenes as $imagen): ?>
 										<li>
-											<img src=" <?php echo $image['url']; ?> " alt="">
+											<a  data-slide-index="<?php echo $index ?>" href="">
+												<img src=" <?php echo $imagen['url']; ?> " alt="">
+											</a>
 										</li>
+										<?php 	$index++ ; ?>
 									<?php endforeach; ?>
-								 </ul>
-								<?php endif; ?>
+									 </ul>
+									<?php endif; ?>
+								</div>
 
-
-								<?php
-								$imagenes = get_field('colores');
-								if( $imagenes ): ?>
-								<ul class="carrocolores_colores">
-								<?php 	$index = 0; ?>
-								<?php foreach( $imagenes as $imagen): ?>
-									<li>
-										<a  data-slide-index="<?php echo $index ?>" href="">
-											<img src=" <?php echo $imagen['url']; ?> " alt="">
-										</a>
-									</li>
-									<?php 	$index++ ; ?>
-								<?php endforeach; ?>
-								 </ul>
-								<?php endif; ?>
-
-
-
-
-
-
-
-								<ul class="nav nav-pills nav-stacked">
-									<li><a href="#motor" data-toggle="tab">motor</a></li>
-									<li><a href="#encendido" data-toggle="tab">encendido</a></li>
-									<li><a href="#alimentacion" data-toggle="tab">alimentacion</a></li>
-									<li><a href="#transmision" data-toggle="tab">transmision</a></li>
-								</ul>
-
-								<div class="tab-content">
-									<div class="tab-pane active" id="motor">
-										<?php the_field('motor'); ?>
-									</div>
-									<div class="tab-pane " id="encendido">
-										<?php the_field('encendido'); ?>
-									</div>
-									<div class="tab-pane " id="alimentacion">
-										<?php the_field('alimentacion'); ?>
-									</div>
-									<div class="tab-pane " id="transmision">
-										<?php the_field('transmision'); ?>
+								<div class="fichatecnicawraper">
+									<ul class="nav nav-pills nav-stacked fichatecnica ">
+										<li><a href="#motor" data-toggle="tab">motor</a></li>
+										<li><a href="#encendido" data-toggle="tab">encendido</a></li>
+										<li><a href="#alimentacion" data-toggle="tab">alimentacion</a></li>
+										<li><a href="#transmision" data-toggle="tab">transmision</a></li>
+									</ul>
+									<div class="tab-content fichatabswraper">
+										<div class="tab-pane active" id="motor">
+											<?php the_field('motor'); ?>
+										</div>
+										<div class="tab-pane " id="encendido">
+											<?php the_field('encendido'); ?>
+										</div>
+										<div class="tab-pane " id="alimentacion">
+											<?php the_field('alimentacion'); ?>
+										</div>
+										<div class="tab-pane " id="transmision">
+											<?php the_field('transmision'); ?>
+										</div>
 									</div>
 								</div>
 
@@ -119,8 +116,9 @@
 									</article>
 							<?php endif; ?>
 
-							<!-- <?php get_sidebar('navwidget'); ?> -->
-							<?php dynamic_sidebar('navwidget'); ?>
+							<div class="navfooterwidget">
+								<?php dynamic_sidebar('navwidget'); ?>
+							</div>
 
 						</div> <!-- end #main -->
 

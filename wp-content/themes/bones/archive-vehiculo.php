@@ -27,9 +27,9 @@
 
 								</section> <!-- end article section -->
 
-								<footer class="article-footer">
+								<!-- <footer class="article-footer">
 
-								</footer> <!-- end article footer -->
+								</footer> --> <!-- end article footer -->
 
 							</article> <!-- end article -->
 
@@ -64,9 +64,9 @@
 
 						</div> <!-- end #main -->
 
-						<!-- <?php get_sidebar(); ?> -->
+						<!-- ?php get_sidebar(); ? -->
 
-								</div> <!-- end #inner-content -->
+						</div> <!-- end #inner-content -->
 
 			</div> <!-- end #content -->
 

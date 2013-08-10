@@ -552,6 +552,49 @@ li.sliderimgLi img{
 		tr td:first-child{
 			width: 370px;
 		}
+/******************************************************************
+DESCRIPCION
+******************************************************************/
+.descripccion{
+	width: 100%;
+	img,.descripcioncopy{
+		display: inline-block;
+		vertical-align: top;
+	}
+	img{
+		width: 33.33%;
+	}
+	.descripcioncopy{
+		width: 66.66%;
+	}
+}
+/******************************************************************
+FICHA TECNICA
+******************************************************************/
+.fichatecnicawraper{
+	width: 100%;
+	ul,.fichatabswraper{
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+.fichatecnica{
+	width: 100px;
+}
+/******************************************************************
+CUSTOM POST TYPES SLIDERS
+******************************************************************/
+.carrocolores_colores{
+	li{
+		display: inline-block;
+		width: 25px;
+		.active{
+			background: #0f0;
+		}
+	}
+}
+
 
 
 /******************************************************************
@@ -966,6 +1009,12 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+.navfooterwidget{
+	.widget{
+		width: 33.33%;
+		display: inline-block;
+	}
+}
 
 .footer {
 	clear: both;

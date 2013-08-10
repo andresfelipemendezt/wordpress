@@ -1200,6 +1200,49 @@ tr td:first-child {
 }
 
 /******************************************************************
+DESCRIPCION
+******************************************************************/
+.descripccion {
+  width: 100%;
+}
+.descripccion img, .descripccion .descripcioncopy {
+  display: inline-block;
+  vertical-align: top;
+}
+.descripccion img {
+  width: 33.33%;
+}
+.descripccion .descripcioncopy {
+  width: 66.66%;
+}
+
+/******************************************************************
+FICHA TECNICA
+******************************************************************/
+.fichatecnicawraper {
+  width: 100%;
+}
+.fichatecnicawraper ul, .fichatecnicawraper .fichatabswraper {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.fichatecnica {
+  width: 100px;
+}
+
+/******************************************************************
+CUSTOM POST TYPES SLIDERS
+******************************************************************/
+.carrocolores_colores li {
+  display: inline-block;
+  width: 25px;
+}
+.carrocolores_colores li .active {
+  background: #0f0;
+}
+
+/******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
 .page-navigation,
@@ -1453,6 +1496,11 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+.navfooterwidget .widget {
+  width: 33.33%;
+  display: inline-block;
+}
+
 .footer {
   clear: both;
 }
