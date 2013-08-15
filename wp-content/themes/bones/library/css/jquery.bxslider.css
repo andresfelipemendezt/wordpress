@@ -22,7 +22,6 @@
 }
 
 .bx-wrapper img {
-	max-width: 300px;
 	height: auto;
 	display: block;
 }
@@ -31,12 +30,8 @@
 ===================================*/
 
 .bx-wrapper .bx-viewport {
-	-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	box-shadow: 0 0 5px #ccc;
-	border: solid #fff 5px;
-	left: -5px;
-	background: #fff;
+	/*left: -5px;*/
+	z-index: 3;
 }
 
 .bx-wrapper .bx-pager,
@@ -99,12 +94,12 @@
 
 .bx-wrapper .bx-prev {
 	left: 10px;
-	background: url(images/controls.png) no-repeat 0 -32px;
+	background: url(images/controls.png) no-repeat 0 0px;
 }
 
 .bx-wrapper .bx-next {
 	right: 10px;
-	background: url(images/controls.png) no-repeat -43px -32px;
+	background: url(images/controls.png) no-repeat -40px 0px;
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -112,7 +107,7 @@
 }
 
 .bx-wrapper .bx-next:hover {
-	background-position: -43px 0;
+	background-position: -40px 0;
 }
 
 .bx-wrapper .bx-controls-direction a {
@@ -120,8 +115,8 @@
 	top: 50%;
 	margin-top: -16px;
 	outline: 0;
-	width: 32px;
-	height: 32px;
+	width: 40px;
+	height: 57px;
 	text-indent: -9999px;
 	z-index: 9999;
 }

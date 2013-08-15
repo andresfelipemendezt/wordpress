@@ -11,7 +11,6 @@ sidebars, comments, ect.
 /************* INCLUDE NEEDED FILES ***************/
 include_once(ABSPATH . 'wp-content/themes/posttypes.php');
 include_once('library/acf-location/acf-location.php');
-include_once('library/custom-post-type.php');
 /*
 1. library/bones.php
 	- head cleanup (remove rsd, uri links, junk css, ect)
@@ -32,7 +31,7 @@ require_once('library/bones.php'); // if you remove this, bones will break
 	- example custom taxonomy (like categories)
 	- example custom taxonomy (like tags)
 */
-require_once('library/custom-post-type.php'); // you can disable this if you like
+//require_once('library/custom-post-type.php'); // you can disable this if you like
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets

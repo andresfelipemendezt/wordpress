@@ -44,7 +44,7 @@ function cooking_create_taxonomies()
 		'name' => _x( 'Tipo de vehiculo', 'taxonomy general name' ),
 		'singular_name' => _x( 'Tipo de vehiculo', 'taxonomy singular name' ),
 		'search_items' =>  __( 'Buscar en tipos de vehiculo' ),
-		'all_items' => __( 'Todos los tipos de vehiculos' ),
+		'all_items' => __( 'Tipos de vehiculos' ),
 		'most_used_items' => null,
 		'parent_item' => null,
 		'parent_item_colon' => null,
@@ -52,7 +52,7 @@ function cooking_create_taxonomies()
 		'update_item' => __( 'Actualizar tipo de vhiculo' ),
 		'add_new_item' => __( 'Agregar nuevo tipo de vehiculo' ),
 		'new_item_name' => __( 'Nueno tipo de vehiculo' ),
-		'menu_name' => __( 'Tipo de vehiculo' ),
+		'menu_name' => __( 'Tipo de vehiculo' )
 	);
 	register_taxonomy('Tipo de vehiculo','vehiculos',array(
 		'hierarchical' => true,

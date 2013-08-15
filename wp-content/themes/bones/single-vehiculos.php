@@ -1,10 +1,9 @@
 <?php get_header(); ?>
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/library/js/jquery.bxslider.min.js"></script>
 
 			<div id="content">
 
 				<div id="inner-content" class="wrap clearfix">
+
 						<div id="main" class=" first clearfix" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -78,6 +77,15 @@
 										<li><a href="#encendido" data-toggle="tab">encendido</a></li>
 										<li><a href="#alimentacion" data-toggle="tab">alimentacion</a></li>
 										<li><a href="#transmision" data-toggle="tab">transmision</a></li>
+										<li><a href="#relaciones_de_transmision" data-toggle="tab">Relaciones de transmisión</a></li>
+										<li><a href="#sistema_de_frenos" data-toggle="tab">Sistema de frenos</a></li>
+										<li><a href="#suspension_delantera" data-toggle="tab">Suspensión delantera</a></li>
+										<li><a href="#suspension_trasera" data-toggle="tab">Suspensión trasera</a></li>
+										<li><a href="#direccion" data-toggle="tab">Dirección</a></li>
+										<li><a href="#neumaticos_y_llantas" data-toggle="tab">Neumáticos y Llantas</a></li>
+										<li><a href="#peso_y_capacidades_del_vehiculo" data-toggle="tab">Peso y capacidades del Vehículo</a></li>
+										<li><a href="#dimensiones" data-toggle="tab">Dimensiones</a></li>
+										<li><a href="#prestaciones" data-toggle="tab">Prestaciones</a></li>
 									</ul>
 									<div class="tab-content fichatabswraper">
 										<div class="tab-pane active" id="motor">
@@ -91,6 +99,39 @@
 										</div>
 										<div class="tab-pane " id="transmision">
 											<?php the_field('transmision'); ?>
+										</div>
+										<div class="tab-pane " id="relaciones_de_transmision">
+											<?php the_field('relaciones_de_transmision'); ?>
+										</div>
+										<div class="tab-pane " id="sistema_de_frenos">
+											<?php the_field('sistema_de_frenos'); ?>
+										</div>
+										<div class="tab-pane " id="suspension_delantera">
+											<?php the_field('suspension_delantera'); ?>
+										</div>
+										<div class="tab-pane " id="suspension_delantera">
+											<?php the_field('suspension_delantera'); ?>
+										</div>
+										<div class="tab-pane " id="suspension_trasera">
+											<?php the_field('suspension_trasera'); ?>
+										</div>
+										<div class="tab-pane " id="direccion">
+											<?php the_field('direccion'); ?>
+										</div>
+										<div class="tab-pane " id="neumaticos_y_llantas">
+											<?php the_field('neumaticos_y_llantas'); ?>
+										</div>
+										<div class="tab-pane " id="peso_y_capacidades_del_vehiculo">
+											<?php the_field('peso_y_capacidades_del_vehiculo'); ?>
+										</div>
+										<div class="tab-pane " id="peso_y_capacidades_del_vehiculo">
+											<?php the_field('peso_y_capacidades_del_vehiculo'); ?>
+										</div>
+										<div class="tab-pane " id="dimensiones">
+											<?php the_field('dimensiones'); ?>
+										</div>
+										<div class="tab-pane " id="prestaciones">
+											<?php the_field('prestaciones'); ?>
 										</div>
 									</div>
 								</div>

@@ -14,12 +14,39 @@
 
 		<!-- all js scripts are loaded in library/bones.php -->
 		<?php wp_footer(); ?>
-
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/bootstrap.min.js"></script>
-		<script>
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/jquery.bxslider.min.js"></script>
 
+		<script>
 			var j = $.noConflict();
 			j(function(){
+				j('.bxslider').bxSlider({
+					minSlides: 5,
+  					maxSlides: 5,
+			  		slideWidth: 192,
+			  		slideMargin: 0,
+					adaptiveHeight: true,
+					prevSelector: '.vehiculos',
+					nextSelector: '.vehiculos'
+
+				});
+
+				j('.bannerindex').bxSlider({
+			  		slideMargin: 0,
+			  		adaptiveHeight: true,
+			  		pagerCustom: 'li'
+				});
+
+				j('.footerslider').bxSlider({
+					minSlides: 3,
+  					maxSlides: 3,
+  					slideWidth: 300,
+  					adaptiveHeight: true,
+  					slideMargin: 20,
+
+				});
 
 			    j('.carrocolores').bxSlider({
 					auto: false,
@@ -32,6 +59,23 @@
 					j(this).tab('show');
 				});
 			});
+			var map;
+			var myLatLang = new google.maps.LatLng(<?php  $location = get_field('google_maps'); echo $location['coordinates']; ?>);
+			function initialize() {
+		  		var mapOptions = {
+		    		zoom: 8,
+		    		center: myLatLang,
+		    		mapTypeId: google.maps.MapTypeId.ROADMAP
+		  		};
+		  		map = new google.maps.Map(document.getElementById('map-canvas'),
+		      	mapOptions);
+		      	var marker = new google.maps.Marker({
+		     		position: myLatLang,
+		      		map: map
+		  		});
+			};
+			google.maps.event.addDomListener(window, 'load', initialize);
+
 
 		</script>
 

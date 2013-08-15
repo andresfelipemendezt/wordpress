@@ -770,7 +770,7 @@ body {
   font-family: "Georgia", Cambria, Times New Roman, Times, serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #565656;
+  color: #828282;
 }
 
 /********************
@@ -897,7 +897,7 @@ HEADER STYLES
 .header {
   background: url("../images/bgheader.png");
   background-repeat: repeat-y repeat-x;
-  height: 120px;
+  height: 114px;
   position: relative;
 }
 
@@ -967,7 +967,7 @@ nav li a {
   text-decoration: none;
   padding: 10px 10px;
   border-bottom: 1px solid #ccc;
-  font-size: 12px;
+  font-size: 11px;
   top: 7px;
   position: relative;
   /*
@@ -986,6 +986,10 @@ nav li a:hover, nav li a:focus {
   background-image: linear-gradient(-180deg, #c61d30 0%, #6e0c0b 100%);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff6e0c0b,endColorstr=#ffc61d30,GradientType=1)";
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff6e0c0b,endColorstr=#ffc61d30,GradientType=1);
+}
+nav li a[title="homelogo"]:hover {
+  background-image: url(../images/fiatMenuLogo.png);
+  background-color: transparent;
 }
 nav li a:after {
   position: absolute;
@@ -1015,6 +1019,23 @@ nav li ul.children li a {
   left: 0;
 }
 
+.footeriamgesnav {
+  background-image: -moz-linear-gradient(50% 0% -90deg, #9f1a19 0%, #81100f 100%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, #9f1a19), color-stop(1, #81100f));
+  background-image: -webkit-linear-gradient(-90deg, #9f1a19 0%, #81100f 100%);
+  background-image: -o-linear-gradient(-90deg, #9f1a19 0%, #81100f 100%);
+  background-image: -ms-linear-gradient(-90deg, #9f1a19 0%, #81100f 100%);
+  background-image: linear-gradient(180deg, #9f1a19 0%, #81100f 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff9f1a19,endColorstr=#ff81100f,GradientType=0)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff9f1a19,endColorstr=#ff81100f,GradientType=0);
+}
+.footeriamgesnav li {
+  display: inline-block;
+}
+
+/*********************
+SIDEBARS STYLES
+*********************/
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -1242,6 +1263,199 @@ CUSTOM POST TYPES SLIDERS
   background: #0f0;
 }
 
+/*********************
+PAGES & CONTENT STYLES
+*********************/
+.bannerwraper {
+  position: relative;
+  background: url(../images/sliderIndexBg.jpg);
+  width: 100%;
+  height: 357px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  border-bottom: 23px solid #7f0619;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+ul.bannerindex {
+  margin: 0;
+  padding: 0;
+  height: 360px;
+}
+ul.bannerindex li, ul.bannerindex img {
+  height: 360px;
+}
+ul.bannerindex img {
+  width: auto;
+}
+
+.bxsliderwraper {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  top: -32px;
+}
+.bxsliderwraper h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  color: #686868;
+}
+.bxsliderwraper h2:after {
+  position: absolute;
+  top: 20px;
+  content: '';
+  right: -250px;
+  width: 0;
+  height: 0;
+  border-top: 1px solid transparent;
+  border-bottom: .5px solid transparent;
+  border-left: 560px solid #d6d6d6;
+}
+.bxsliderwraper h2:before {
+  position: absolute;
+  top: 20px;
+  content: '';
+  left: -250px;
+  width: 0;
+  height: 0;
+  border-top: 1px solid transparent;
+  border-bottom: .5px solid transparent;
+  border-right: 560px solid #d6d6d6;
+}
+
+.bxslider {
+  position: relative;
+  top: -15px;
+  padding-top: 15px;
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+}
+
+a.title {
+  text-align: center;
+  position: relative;
+  width: 115px;
+  display: inline-block;
+  margin: 0 auto;
+  left: 50%;
+  margin-left: -35px;
+  color: #8c041c;
+  vertical-align: top;
+  top: 15px;
+}
+
+a.title:after {
+  position: absolute;
+  content: '';
+  background: url(images/lidecvehiculoindexslider.png);
+  width: 16px;
+  height: 16px;
+  left: -18px;
+  top: 5px;
+}
+
+ul.vehiculos {
+  height: 60px;
+  width: 960px;
+  left: 50%;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-left: -480px !important;
+  display: block;
+  position: absolute;
+  top: 0;
+  background: #fff;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  z-index: 1;
+}
+ul.vehiculos a {
+  display: inline-block;
+  color: transparent;
+  position: absolute;
+}
+ul.vehiculos .bx-prev {
+  width: 32px;
+  height: 60px;
+  background: url(images/prev.png);
+  left: -30px;
+}
+ul.vehiculos .bx-next {
+  width: 32px;
+  height: 60px;
+  background: url(images/next.png);
+  right: -30px;
+}
+
+ul.vehiculos:after {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  width: 960px;
+  height: 150px;
+  top: 60px;
+  background-image: -moz-radial-gradient(50% -6%, ellipse closest-side, black 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-radial-gradient(50% -6%, ellipse closest-side, black 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -ms-radial-gradient(50% -6%, ellipse closest-side, black 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: radial-gradient(362px 75px at 50% -6%, black 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.indexcontentwraper div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.indexcontent {
+  width: 610px;
+  padding: 18px;
+}
+.indexcontent h1 {
+  font-size: 18px;
+  border-bottom: none;
+}
+.indexcontent h3 {
+  font-size: 30px;
+}
+.indexcontent p {
+  font-size: 14px;
+}
+
+.mapwraper {
+  width: 331px;
+  position: relative;
+  top: 70px;
+}
+.mapwraper:after {
+  content: '';
+  background: url(../images/mapfooter.png);
+  width: 100%;
+  height: 54px;
+  bottom: -32px;
+  left: 0;
+  position: absolute;
+}
+
+.sedesmap {
+  margin: 0 auto;
+  margin-bottom: 72px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 960px;
+  height: 384px;
+  position: relative;
+}
+.sedesmap #map-canvas {
+  width: 960px;
+  height: 384px;
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -1265,7 +1479,7 @@ PAGE NAVI STYLES
   margin-left: 10px;
 }
 .bones_page_navi li a {
-  padding: 3px 6px;
+  padding: 3px 4px;
   display: block;
   text-decoration: none;
   position: relative;
@@ -1487,6 +1701,13 @@ COMMENT FORM STYLES
 }
 
 /*********************
+POSTVENTAS & FORMULARIOS
+*********************/
+.forumariopostventa {
+  height: 300px;
+}
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
 .widget ul li {
@@ -1503,6 +1724,17 @@ FOOTER STYLES
 
 .footer {
   clear: both;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  top: -170px;
+}
+.footer nav {
+  position: relative;
+  top: 170px;
+}
+.footer nav a {
+  color: #696969;
 }
 
 /*
