@@ -1,3 +1,15 @@
+			<ul class="footeriamgesnav">
+				<li> <a href="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/test-drive.jpg" alt="">
+				</a> </li><!--
+			 --><li> <a href="http://co.fiatalertas.com/Home.aspx?mssGUID=67255ecc-dafb-44d9-89c2-395f1a03d9ca">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/fiatalertas.jpg" alt="">
+				</a> </li><!--
+			 --><li> <a href="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/lineaatencion.jpg" alt="">
+				</a> </li>
+			</ul>
+
 			<footer class="footer" role="contentinfo">
 
 				<div id="inner-footer" class="wrap clearfix">
@@ -58,6 +70,12 @@
 					e.preventDefault();
 					j(this).tab('show');
 				});
+
+				j('.clientewraper .nav a').click(function (e) {
+					e.preventDefault();
+					j(this).tab('show');
+				});
+
 			});
 			var map;
 			var myLatLang = new google.maps.LatLng(<?php  $location = get_field('google_maps'); echo $location['coordinates']; ?>);

@@ -1,36 +1,51 @@
 <?php /* Template Name: POSTVENTA */ ?>
 
 <?php get_header(); ?>
-	<!-- BANNER INDEX HEADER -->
-
-
-	<!-- SLIDER AUTOMOVILES -->
 	<div id="content">
 
 		<div id="inner-content" class="wrap clearfix">
 
 			<div id="main" class=" first clearfix row" role="main">
 				<?php while (have_posts()) : the_post(); ?>
+				<div class="row">
+					<div class="span8">
 
-				<div class="span8">
+						<?php the_title(); ?>
+						<?php the_content(); ?>
 
-					<?php the_title(); ?>
-					<?php the_content(); ?>
+						<div class="forumariopostventa">
+							<?php echo do_shortcode('[contact-form-7 id="424" title="Formulario de contacto 1"]');  ?>
+						</div>
 
-					<div class="forumariopostventa">
-						<?php echo do_shortcode('[contact-form-7 id="424" title="Formulario de contacto 1"]');  ?>
 					</div>
 
+					<div class="span4 sidebar">
+
+						<?php the_field('direccion'); ?>
+						<?php the_field('telefono'); ?>
+						<?php the_field('callcenter'); ?>
+
+					</div>
 				</div>
-
-				<div class="span4 sidebar">
-
-					<?php the_field('direccion'); ?>
-					<?php the_field('telefono'); ?>
-					<?php the_field('callcenter'); ?>
-
+				<div class="row">
+					<div class="span8">
+						<!-- Clinica servicios -->
+						<?
+						 $images = get_field('clinica-servicios');
+						 if( $images ): ?>
+						 <ul class="carrocolores">
+							<?php foreach( $images as $image): ?>
+								<li>
+									<img src=" <?php echo $image['url']; ?> " alt="">
+								</li>
+							<?php endforeach; ?>
+						 </ul>
+						<?php endif; ?> <!-- end servicios -->
+					</div>
+					<div class="span4">
+						<?php the_field('quote') ?>
+					</div>
 				</div>
-
 				<?php endwhile;?>
 
 			</div> <!-- end #main -->

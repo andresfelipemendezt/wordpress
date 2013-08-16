@@ -851,7 +851,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
-  */
+  // */
   /* removing text decoration from all headline links */
 }
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
@@ -1109,7 +1109,7 @@ li.sliderimgLi {
 }
 
 #content {
-  margin-top: 2.2em;
+  background: #f2f2f2;
 }
 
 /* end .hentry */
@@ -1703,13 +1703,20 @@ COMMENT FORM STYLES
 /*********************
 POSTVENTAS & FORMULARIOS
 *********************/
-.forumariopostventa {
-  height: 300px;
-}
-
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.aside {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  color: #ababab;
+  font-size: 13px;
+}
+.aside h1 {
+  font-size: 17px;
+}
+
 .widget ul li {
   /* deep nesting */
 }

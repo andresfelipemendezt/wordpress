@@ -7,12 +7,7 @@
 	<div id="content">
 
 		<div id="inner-content" class="wrap clearfix">
-			<div class="breadcrumbs">
-			    <?php if(function_exists('bcn_display'))
-			    {
-			        bcn_display();
-			    }?>
-			</div>
+			<div class="breadcrumbs"> <?php if(function_exists('bcn_display')) {bcn_display(); }?> </div>
 			<div id="main" class=" first clearfix" role="main">
 			<div class="sedesmap">
 
