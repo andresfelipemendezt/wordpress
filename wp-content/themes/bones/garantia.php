@@ -1,7 +1,11 @@
 <?php /* Template Name: GARANTIA */ ?>
 
 <?php get_header(); ?>
-
+	<div class="breadcrumbswraper">
+		<div class="breadcrumbs">
+			<?php if(function_exists('bcn_display')) {bcn_display(); }?>
+		</div>
+	</div>
 	<div id="content">
 
 		<div id="inner-content" class="wrap clearfix">
@@ -13,7 +17,8 @@
 
 					<div class="span8">
 
-						<?php the_title(); ?>
+						<h1 class="title"> <?php the_title(); ?> </h1>
+
 						<?php the_content(); ?>
 
 					</div>

@@ -1,11 +1,13 @@
 <?php /* Template Name: CLIENTE PREMIUM */ ?>
 <?php get_header(); ?>
-	<div class="breadcrumbs"> <?php if(function_exists('bcn_display')) {bcn_display(); }?> </div>
+	<div class="breadcrumbs">
+		<?php if(function_exists('bcn_display')) {bcn_display(); }?>
+	</div>
 	<div id="content">
 		<div id="inner-content" class="wrap clearfix">
 			<?php while (have_posts()) : the_post(); ?>
 			<div id="main" class=" first clearfix" role="main">
-				<?php the_title(); ?>
+				<h1 class="title"><?php the_title(); ?></h1>
 				<div class="row">
 					<div class="span6">
 						<?php the_content(); ?>
@@ -16,7 +18,6 @@
 				</div>
 				<div class="row">
 					<div class="span12">
-
 						<div class="clientewraper">
 							<ul class="nav nav-pills nav-stacked cliente7">
 								<li><a href="#mensajero" data-toggle="tab">MENSAJERO</a></li>

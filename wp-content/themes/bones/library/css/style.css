@@ -773,6 +773,19 @@ body {
   color: #828282;
 }
 
+.title {
+  border-bottom: 2px solid #c9c9c9;
+  text-transform: uppercase;
+}
+
+/*********************
+BREAD CRUMBS
+*********************/
+.breadcrumbs {
+  width: 960px;
+  margin: 0 auto;
+}
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -866,7 +879,6 @@ h1, .h1 {
   font-size: 2.5em;
   line-height: 1.333em;
   color: #990b0a;
-  border-bottom: 2px solid #c9c9c9;
 }
 
 h2, .h2 {
