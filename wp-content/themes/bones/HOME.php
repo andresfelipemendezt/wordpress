@@ -18,7 +18,7 @@
 
 	<!-- SLIDER AUTOMOVILES -->
 
-	<div class="bxsliderwraper">
+	<div class="bxsliderwraper slidervehiculos">
 		<ul  class="vehiculos"></ul>
 		<div class="bxslider ">
 			<?php $my_query = new WP_Query('post_type=vehiculos'); ?>
@@ -40,8 +40,6 @@
 		<div id="inner-content" class="wrap clearfix">
 
 			<div id="main" class=" first clearfix" role="main">
-
-
 
 				<div class="indexcontentwraper">
 

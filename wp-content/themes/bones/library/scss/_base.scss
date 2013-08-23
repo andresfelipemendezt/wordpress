@@ -16,22 +16,31 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $serif;
+	font-family: $sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: #828282;
+	overflow-x: hidden;
+	font-size: 13px;
 }
 .title {
 	border-bottom:2px solid #c9c9c9;
 	text-transform: uppercase;
 }
-
+hr{
+	border: 1px solid $fiat-gris;
+}
 /*********************
 BREAD CRUMBS
 *********************/
 .breadcrumbs{
+	padding-top: 25px;
+	padding-bottom: 10px;
 	width: 960px;
 	margin: 0 auto;
+	font-size: 13px !important;
+	text-transform: uppercase;
+	background-color: #fff;
 }
 /********************
 WORDPRESS BODY CLASSES
@@ -79,7 +88,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 960px;
 	margin: 0 auto;
 }
 
@@ -139,6 +148,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
+	color:#990b0a;
 	font-size: 1.75em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
@@ -170,7 +180,20 @@ HEADER STYLES
 	height: 114px;
 	position: relative;
 }
-.height:after{
+.header:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 64px;
+	background-image:-moz-radial-gradient(50% 50%,circle farthest-side,rgba(243,243,243,0) 0%,rgb(243,243,243) 100%);
+	background-image:-webkit-gradient(radial,50% 50%,0,50% 50%,487.0611572265625,color-stop(0, rgba(243,243,243,0)),color-stop(1, rgb(243,243,243)));
+	background-image:-webkit-radial-gradient(50% 50%,circle farthest-side, rgba(243,243,243,0) 0%,rgb(243,243,243) 100%);
+	background-image:-ms-radial-gradient(50% 50%,circle farthest-side, rgba(243,243,243,0) 0%,rgb(243,243,243) 100%);
+	background-image:radial-gradient(487px at 50% 50%,rgba(243,243,243,0) 0%,rgb(243,243,243) 100%);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0,FinishOpacity=100,Style=2)";
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0,FinishOpacity=100,Style=2);
 
 }
 
@@ -192,6 +215,12 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+
+ul.submenu{
+	a{
+		background: #343434;
+	}
+}
 a[title="homelogo"]{
 	color: transparent;
 	text-indent:-9999px;
@@ -203,6 +232,7 @@ a[title="homelogo"]{
 }
 .navheader{
 		@include css-gradient(#323232,#010101);
+		height: 50px;
 }
 nav {
 	border-bottom: 0;
@@ -216,35 +246,36 @@ nav {
 		margin: 0 auto;
 		position: relative;
 		z-index: 999;
-	}
+		a {
+			padding: 10px 10px;
+		}
 
+		a:hover {
+			background-image:-moz-linear-gradient(50% 0% -180deg,rgb(198,29,48) 0%,rgb(110,12,11) 100%);
+			background-image:-webkit-gradient(linear,50% 0%,-88% 0%,color-stop(0, rgb(198,29,48)),color-stop(1, rgb(110,12,11)));
+			background-image:-webkit-linear-gradient(-180deg,rgb(198,29,48) 0%,rgb(110,12,11) 100%);
+			background-image:-o-linear-gradient(-180deg,rgb(198,29,48) 0%,rgb(110,12,11) 100%);
+			background-image:-ms-linear-gradient(-180deg,rgb(198,29,48) 0%,rgb(110,12,11) 100%);
+			background-image:linear-gradient(-180deg,rgb(198,29,48) 0%,rgb(110,12,11) 100%);
+			-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff6e0c0b,endColorstr=#ffc61d30,GradientType=1)";
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff6e0c0b,endColorstr=#ffc61d30,GradientType=1);
+		}
+		li:nth-child(4) a:after,
+		li:nth-child(9) a:after,
+		{
+			content: '';
+		}
+	}
 
 	li {
 
 		a {
 			display: block;
 			text-decoration: none;
-			padding: 10px 10px;
 			border-bottom: 1px solid #ccc;
-			font-size: 11px;
+			font-size: 13px;
 			top: 7px;
 			position: relative;
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
-			&:hover, &:focus {
-				background-image:-moz-linear-gradient(50% 0% -180deg,rgb(198,29,48) 0%,rgb(110,12,11) 100%);
-				background-image:-webkit-gradient(linear,50% 0%,-88% 0%,color-stop(0, rgb(198,29,48)),color-stop(1, rgb(110,12,11)));
-				background-image:-webkit-linear-gradient(-180deg,rgb(198,29,48) 0%,rgb(110,12,11) 100%);
-				background-image:-o-linear-gradient(-180deg,rgb(198,29,48) 0%,rgb(110,12,11) 100%);
-				background-image:-ms-linear-gradient(-180deg,rgb(198,29,48) 0%,rgb(110,12,11) 100%);
-				background-image:linear-gradient(-180deg,rgb(198,29,48) 0%,rgb(110,12,11) 100%);
-				-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff6e0c0b,endColorstr=#ffc61d30,GradientType=1)";
-				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff6e0c0b,endColorstr=#ffc61d30,GradientType=1);
-			}
 		}
 		a[title="homelogo"]:hover{
 			background-image: url(../images/fiatMenuLogo.png);
@@ -253,13 +284,7 @@ nav {
 		a:after{
 			position: absolute;
 			content: '|';
-			top:9px;
-			right: 0;
-		}
-		a:nth-child(4):after,
-		a:nth-child(8):after,
-		{
-			content: '°';
+			right: -2px;
 		}
 
 		&:first-child {}
@@ -329,13 +354,120 @@ nav {
 	background-image:linear-gradient(180deg,rgb(159,26,25) 0%,rgb(129,16,15) 100%);
 	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff9f1a19,endColorstr=#ff81100f,GradientType=0)";
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff9f1a19,endColorstr=#ff81100f,GradientType=0);
+	ul{
+		width: 960px;
+		margin: 0 auto;
+	}
 	li{
 		display: inline-block;
+		margin: 0 10px;
+		position: relative;
+		top: -50px;
 	}
 }
+
+
+#menu-navegacion-vehiculos{
+	width: 855px;
+	margin: 0 auto;
+	a{
+		padding: 8px;
+	}
+}
+
 /*********************
 SIDEBARS STYLES
 *********************/
+
+.sidebar{
+	background-color: #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 20px;
+	border-radius: 15px;
+	*{
+		margin: 0;
+	}
+	hr{
+		margin: 10px 0;
+	}
+	h1{
+		font-size: 17px;
+	}
+	#map-canvas{
+		width: 260px;
+	}
+	.direccion,
+	.telefono,
+	.callcenter,
+	.nuestrasede,
+	.dias{
+		margin-top: 20px;
+		padding-left: 25px;
+		margin-left: 5px;
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			top: 3px;
+			left: 0px;
+			background: url('../images/sidebarsprites.png') no-repeat;
+		}
+	}
+	.telefono{
+		color:$red;
+	}
+	.direccion:after{
+		background-position: 0 -17px;
+		width: 19px;
+		height: 18px;
+	}
+	.telefono:after{
+		background-position: 0 0;
+		width: 16px;
+		height: 16px;
+	}
+	.dias:after{
+		background-position: -37px 0;
+		width: 18px;
+		height: 18px;
+	}
+	.callcenter{
+		p{
+			&:first-child{
+				line-height: 10px;
+			}
+			&:nth-child(2){
+				margin-top: 2px;
+				line-height: 22px;
+			}
+			&:nth-child(3){
+				line-height: 12px;
+				margin-bottom: 2px;
+			}
+		}
+
+		&:after{
+			background-position: -20px -20px;
+			width: 15px;
+			height: 17px;
+		}
+	}
+	.nuestrasede{
+		margin-top: 20px;
+		position: relative;
+		&:after{
+			background-position: -18px 0;
+			width: 14px;
+			height: 18px;
+		}
+		#map-canvas {
+			width: 229px;
+			// margin-left: 30px;
+		}
+	}
+}
 
 /*********************
 POSTS & CONTENT STYLES
@@ -413,6 +545,7 @@ li.sliderimgLi img{
 }
 #content {
 	background:#f2f2f2;
+	padding-bottom: 60px;
 }
 
 
@@ -560,7 +693,18 @@ li.sliderimgLi img{
 			dd {margin: 0;}
 
 		} /* end .gallery */
-
+		.galeriaservicios{
+			li{
+				display: inline-block;
+				width: 33.33%;
+			}
+		}
+		.clinicaservicios .quotation{
+			vertical-align: top;
+			position: relative;
+			top: -13px;
+			font-size: 13px;
+		}
 		/* gallery caption styles */
 		.gallery-caption {}
 
@@ -583,6 +727,48 @@ li.sliderimgLi img{
 		tr td:first-child{
 			width: 370px;
 		}
+.clientewraper{
+	ul.nav{
+		background-image:-moz-linear-gradient(50% 0% -90deg,rgb(46,46,46) 0%,rgb(12,12,12) 100%);
+		background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(46,46,46)),color-stop(1, rgb(12,12,12)));
+		background-image:-webkit-linear-gradient(-90deg,rgb(46,46,46) 0%,rgb(12,12,12) 100%);
+		background-image:-o-linear-gradient(-90deg,rgb(46,46,46) 0%,rgb(12,12,12) 100%);
+		background-image:-ms-linear-gradient(-90deg,rgb(46,46,46) 0%,rgb(12,12,12) 100%);
+		background-image:linear-gradient(180deg,rgb(46,46,46) 0%,rgb(12,12,12) 100%);
+		-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff2e2e2e,endColorstr=#ff0c0c0c,GradientType=0)";
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff2e2e2e,endColorstr=#ff0c0c0c,GradientType=0);
+		border-bottom: 3px solid $red;
+		border-radius: 10px;
+		li{
+			height: 45px;
+		}
+		a{
+			display: inline-block;
+			height: 45px;
+			padding: 18px 38px;
+			border-right: 1px solid $dark-grey;
+			border-radius: 0;
+			margin: 0;
+		}
+		li:first-child a{
+			-moz-border-radius:10px 0px 0px 10px;
+			-webkit-border-radius:10px 0px 0px 10px;
+			border-radius:10px 0px 0px 10px;
+		}
+		li.active a,
+		a:hover{
+			background-image:-moz-linear-gradient(50% 0% -90deg,rgb(12,12,12) 0%,rgb(46,46,46) 100%);
+			background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(12,12,12)),color-stop(1, rgb(46,46,46)));
+			background-image:-webkit-linear-gradient(-90deg,rgb(12,12,12) 0%,rgb(46,46,46) 100%);
+			background-image:-o-linear-gradient(-90deg,rgb(12,12,12) 0%,rgb(46,46,46) 100%);
+			background-image:-ms-linear-gradient(-90deg,rgb(12,12,12) 0%,rgb(46,46,46) 100%);
+			background-image:linear-gradient(180deg,rgb(12,12,12) 0%,rgb(46,46,46) 100%);
+			-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff0c0c0c,endColorstr=#ff2e2e2e,GradientType=0)";
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff0c0c0c,endColorstr=#ff2e2e2e,GradientType=0);
+			background-color: transparent;
+		}
+	}
+}
 /******************************************************************
 DESCRIPCION
 ******************************************************************/
@@ -608,6 +794,15 @@ FICHA TECNICA
 		display: inline-block;
 		vertical-align: top;
 	}
+	#mensajero{
+		*{
+			vertical-align: top;
+		}
+	}
+	h2{
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	}
 }
 
 .fichatecnica{
@@ -616,6 +811,7 @@ FICHA TECNICA
 /******************************************************************
 CUSTOM POST TYPES SLIDERS
 ******************************************************************/
+
 .carrocolores_colores{
 	li{
 		display: inline-block;
@@ -625,7 +821,32 @@ CUSTOM POST TYPES SLIDERS
 		}
 	}
 }
-
+.slidervehiculos{
+	height: 290px;
+	background-color: #fff;
+	// background:#f2f2f2;
+	background: url('../images/bgheader.png');
+	background-repeat:repeat-y repeat-x;
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		text-align: left;
+		width:100%;
+		height: 100%;
+		// background-color: #f00;
+		top: 0;
+		left: 0;
+		// margin-left: ;
+		background-image:-moz-radial-gradient(50% -9%,ellipse farthest-side,rgba(242,242,242,0) 0%,rgb(242,242,242) 100%);
+		background-image:-webkit-radial-gradient(50% -9%,ellipse farthest-side,rgba(242,242,242,0) 0%,rgb(242,242,242) 100%);
+		background-image:-ms-radial-gradient(50% -9%,ellipse farthest-side,rgba(242,242,242,0) 0%,rgb(242,242,242) 100%);
+		background-image:radial-gradient(487px 342px at 50% -9%,rgba(242,242,242,0) 0%,rgb(242,242,242) 100%);
+	}
+	h2{
+		background:#f2f2f2;
+	}
+}
 /*********************
 PAGES & CONTENT STYLES
 *********************/
@@ -766,11 +987,26 @@ ul.vehiculos:after{
 	background-image:radial-gradient(362px 75px at 50% -6%,rgb(0,0,0) 0%,rgba(255,255,255,0) 100%);
 }
 
+.quote p{
+	font-size: 22px !important;
+	text-transform: uppercase;
+}
+.blockquote{
+	padding: 5px 0;
+	position: relative;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
 .indexcontentwraper div{
 	display: inline-block;
 	vertical-align: top;
 }
-
+.nuestraempresa{
+	p{
+		margin: 0;
+	}
+}
 .indexcontent{
 	width: 610px;
 	padding: 18px;
@@ -1109,7 +1345,40 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
+form{
+	*{
+		margin: 0;
+		vertical-align: top;
+	}
+	h1{
+		font-size: 18px;
+	}
+	input[type="text"],
+	input[type="email"]{
+		display: inline-block;
+		height: 30px;
+		margin: 0;
+		width: 100%;
+	}
+	textarea{
+		width: 100%;
+		height: 85px;
+	}
+	input[type="submit"]{
+		width: 100%;
+		margin-top: 19px;
+		height: 29px;
+		border-radius: 5px;
+		background-color: #9a2214;
+		border: none;
+		color: #fff;
+		font-weight: bold;
+	}
+	p{
 
+		margin-top: 5px ;
+	}
+}
 .respond-form {
 	margin: 1.5em 10px;
 	padding-bottom: 2.2em;
@@ -1243,6 +1512,7 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+
 .navfooterwidget{
 	.widget{
 		width: 33.33%;
@@ -1252,7 +1522,6 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	width: 100%;
-	height: 150px;
 	position: relative;
 	top: -170px;
 
@@ -1261,8 +1530,12 @@ FOOTER STYLES
 		top: 170px;
 		a{
 			color:#696969;
+			padding: 10px;
 		}
 	}
+	a:after{
+			right: 0px;
+		}
 }
 	/*
 	if you checked out the link above:

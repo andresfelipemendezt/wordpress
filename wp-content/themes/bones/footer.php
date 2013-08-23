@@ -1,14 +1,16 @@
-			<ul class="footeriamgesnav">
-				<li> <a href="">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/test-drive.jpg" alt="">
-				</a> </li><!--
-			 --><li> <a href="http://co.fiatalertas.com/Home.aspx?mssGUID=67255ecc-dafb-44d9-89c2-395f1a03d9ca">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/fiatalertas.jpg" alt="">
-				</a> </li><!--
-			 --><li> <a href="">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/lineaatencion.jpg" alt="">
-				</a> </li>
-			</ul>
+			<div class="footeriamgesnav">
+				<ul>
+					<li> <a href="">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/test-drive.jpg" alt="">
+					</a> </li><!--
+				 --><li> <a href="http://co.fiatalertas.com/Home.aspx?mssGUID=67255ecc-dafb-44d9-89c2-395f1a03d9ca">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/fiatalertas.jpg" alt="">
+					</a> </li><!--
+				 --><li> <a href="">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/lineaatencion.jpg" alt="">
+					</a> </li>
+				</ul>
+			</div>
 
 			<footer class="footer" role="contentinfo">
 

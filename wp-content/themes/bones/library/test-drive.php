@@ -5,18 +5,19 @@
 		<div id="inner-content" class="wrap clearfix">
 			<?php while (have_posts()) : the_post(); ?>
 			<div id="main" class=" first clearfix" role="main">
-				<?php the_title(); ?>
+				<h1><?php the_title(); ?></h1>
 				<div class="row">
 					<div class="span8">
 						<?php the_content(); ?>
-
 						<?php echo do_shortcode('[contact-form-7 id="452" title="Test drive"]');  ?>
-
 					</div>
-					<div class="span4 aside">
+					<div class="span4 sidebar">
 						<h1>HORARIO DE ATENCION</h1>
-						<?php the_field('dias'); ?>
-						<div class="asidemapwraper">
+						<hr>
+						<div class="dias">
+							<?php the_field('dias'); ?>
+						</div>
+						<div class="nuestrasede">
 							<div id="map-canvas"></div>
 						</div>
 					</div>

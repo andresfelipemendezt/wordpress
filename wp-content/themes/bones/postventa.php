@@ -1,6 +1,7 @@
 <?php /* Template Name: POSTVENTA */ ?>
 
 <?php get_header(); ?>
+	<div class="breadcrumbs"> <?php if(function_exists('bcn_display')) {bcn_display(); }?> </div>
 	<div id="content">
 
 		<div id="inner-content" class="wrap clearfix">
@@ -10,7 +11,7 @@
 				<div class="row">
 					<div class="span8">
 
-						<?php the_title(); ?>
+						<h1><?php the_title(); ?></h1>
 						<?php the_content(); ?>
 
 						<div class="forumariopostventa">
@@ -21,28 +22,44 @@
 
 					<div class="span4 sidebar">
 
-						<?php the_field('direccion'); ?>
-						<?php the_field('telefono'); ?>
-						<?php the_field('callcenter'); ?>
-
+						<h3>NUESTRA SEDE EN CALI</h3>
+						<hr>
+						<div class="direccion">
+							<?php the_field('direccion'); ?>
+						</div>
+						<div class="telefono">
+							<?php the_field('telefono'); ?>
+						</div>
+						<div class="callcenter">
+							<?php the_field('callcenter'); ?>
+						</div>
+						<div class="nuestrasede">
+							<div id="map-canvas"></div>
+						</div>
 					</div>
 				</div>
-				<div class="row">
+					<div class="row">
+						<div class="span12">
+							<h1>Clínica de servicios</h1>
+							<hr>
+						</div>
+					</div>
+				<div class="row clinicaservicios">
 					<div class="span8">
 						<!-- Clinica servicios -->
-						<?
-						 $images = get_field('clinica-servicios');
+						<?php
+						 $images = get_field('galeria');
 						 if( $images ): ?>
-						 <ul class="carrocolores">
+						 <ul class="galeriaservicios"><!--
 							<?php foreach( $images as $image): ?>
-								<li>
+							 --><li>
 									<img src=" <?php echo $image['url']; ?> " alt="">
-								</li>
+								</li><!--
 							<?php endforeach; ?>
-						 </ul>
+					 --></ul>
 						<?php endif; ?> <!-- end servicios -->
 					</div>
-					<div class="span4">
+					<div class="span4 sidebar quotation">
 						<?php the_field('quote') ?>
 					</div>
 				</div>
@@ -53,17 +70,5 @@
 		</div> <!-- end #inner-content -->
 
 	</div> <!-- end #content -->
-
-		<ul class="footeriamgesnav">
-			<li> <a href="">
-				<img src="<?php echo get_template_directory_uri(); ?>/library/images/test-drive.jpg" alt="">
-			</a> </li><!--
-		 --><li> <a href="http://co.fiatalertas.com/Home.aspx?mssGUID=67255ecc-dafb-44d9-89c2-395f1a03d9ca">
-				<img src="<?php echo get_template_directory_uri(); ?>/library/images/fiatalertas.jpg" alt="">
-			</a> </li><!--
-		 --><li> <a href="">
-				<img src="<?php echo get_template_directory_uri(); ?>/library/images/lineaatencion.jpg" alt="">
-			</a> </li>
-		</ul>
 
 <?php get_footer(); ?>
