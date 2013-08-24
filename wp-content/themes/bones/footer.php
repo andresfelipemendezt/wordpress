@@ -78,6 +78,12 @@
 					j(this).tab('show');
 				});
 
+				j('.dropdownlisrwraper .carros a').click(function (e) {
+					e.preventDefault();
+					j(this).tab('show');
+				});
+				j('.dropdownlisrwraper .tab-content .tab-pane:first-child').addClass('active');
+
 			});
 			var map;
 			var myLatLang = new google.maps.LatLng(<?php  $location = get_field('google_maps'); echo $location['coordinates']; ?>);

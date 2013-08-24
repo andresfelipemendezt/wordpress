@@ -13,7 +13,11 @@
 					<?php the_title(); ?>
 					<?php the_content(); ?>
 					<hr>
-					<?php echo do_shortcode ('[contact-form-7 id="461" title="Contacto"]'); ?>
+				 	<h1>Información personal</h1>
+				 	<div class="row">
+
+						<?php echo do_shortcode ('[contact-form-7 id="461" title="Contacto"]'); ?>
+				 	</div>
 				</div>
 
 				<div class="span4 sidebar">
@@ -35,4 +39,3 @@
 	</div> <!-- end #content -->
 
 <?php get_footer(); ?>
-

@@ -54,7 +54,9 @@ function cooking_create_taxonomies()
 		'new_item_name' => __( 'Nueno tipo de vehiculo' ),
 		'menu_name' => __( 'Tipo de vehiculo' )
 	);
-	register_taxonomy('Tipo de vehiculo','vehiculos',array(
+
+	register_taxonomy(
+	    'Tipo-de-vehiculo', 'vehiculos',array(
 		'hierarchical' => true,
 		'labels' => $etiquetas_tipodevehiculos,
 		'show_ui' => true,

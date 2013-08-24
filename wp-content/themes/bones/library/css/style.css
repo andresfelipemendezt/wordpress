@@ -1375,6 +1375,9 @@ tr td:first-child {
   width: 370px;
 }
 
+/*******************************
+****** ARCHIVE VEHICULOS********
+********************************/
 .clientewraper ul.nav {
   background-image: -moz-linear-gradient(50% 0% -90deg, #2e2e2e 0%, #0c0c0c 100%);
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, #2e2e2e), color-stop(1, #0c0c0c));
