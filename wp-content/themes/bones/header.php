@@ -17,6 +17,7 @@
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8;" />
 
 		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
@@ -29,8 +30,11 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/bootstrap.min.css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/bootstrap-switch.css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/jquery.bxslider.css">
 
 
@@ -44,23 +48,11 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-
 		<div id="container">
 
 			<header class="header" role="banner">
-
-				<!-- <div id="inner-header" class="wrap clearfix"> -->
-
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-					<a href="<?php echo home_url(); ?>" rel="nofollow"> <img id="logo" src="<?php bloginfo('template_directory'); ?>/library/images/almotoresHeaderLogo.png" alt=""> </a>
-
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
-
-					<nav class="navheader" role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
-
-				<!-- </div> end #inner-header -->
-
-			</header> <!-- end header -->
+				<a href="<?php echo home_url(); ?>" rel="nofollow"> <img id="logo" src="<?php bloginfo('template_directory'); ?>/library/images/almotoresHeaderLogo.png" alt=""> </a>
+				<nav class="navheader" role="navigation">
+					<?php bones_main_nav(); ?>
+				</nav>
+			</header>

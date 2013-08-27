@@ -1,7 +1,6 @@
 <?php /* Template Name: HOME */ ?>
 
 <?php get_header(); ?>
-	<!-- BANNER INDEX HEADER -->
 	<div class="bannerwraper">
 		<?php
 		$images = get_field('banner');
@@ -15,9 +14,6 @@
 			</ul>
 		<?php endif; ?>
 	</div>
-
-	<!-- SLIDER AUTOMOVILES -->
-
 	<div class="bxsliderwraper slidervehiculos">
 		<ul  class="vehiculos"></ul>
 		<div class="bxslider ">
@@ -33,7 +29,7 @@
 				</div>
 			<?php endwhile; ?>
 		</div>
-		<h2>estremandamente unicos y modernos </h2>
+		<h2>extremandamente unicos y modernos </h2>
 	</div>
 	<div id="content">
 

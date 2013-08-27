@@ -1,77 +1,86 @@
-<?php /* Template Name: COTIZAR VEHIVULO */ ?>
-
 <?php get_header(); ?>
-	<!-- BANNER INDEX HEADER -->
-
-	<div class="breadcrumbs"> <?php if(function_exists('bcn_display')) {bcn_display(); }?> </div>
-	<!-- SLIDER AUTOMOVILES -->
+	<div class="breadcrumbs"><?php if(function_exists('bcn_display')) {bcn_display(); }?></div>
 	<div id="content">
-
 		<div id="inner-content row" class="wrap clearfix">
 			<div id="main" class=" first clearfix row" role="main">
-			<?php while (have_posts()) : the_post(); ?>
-			<!-- POST TYPE VEHICULOS CUSTOM QUERY -->
-			<?php $my_query = new WP_Query('post_type=vehiculos'); ?>
-
-			<h1><?php the_title(); ?></h1>
-			<hr>
-			<?php endwhile;?>
-				<div class="span8">
-					<!-- DROP DOWN LIST WRAPER -->
-					<div class="dropdownlisrwraper">
-						<!-- DROP DOWN LIST TABS SELECTORS -->
-					    <ul class="nav nav-tabs">
-						    <li class="dropdown">
-							    <a class="dropdown-toggle"
-							    data-toggle="dropdown"
-							    href="#">
-							    Dropdown
-							    <b class="caret"></b>
-							    </a>
-								    <ul class="dropdown-menu carros">
+				<?php $my_query = new WP_Query('post_type=vehiculos'); ?>
+				<?php while (have_posts()) : the_post(); ?>
+					<h1><?php the_title(); ?></h1>
+					<hr>
+				<?php endwhile;?>
+				<div class="row">
+					<div class="span8">
+						<div class="row">
+							<div class="span3 ">
+								<h2 class="cotizar">Fiat Palio Adventure</h2>
+								<p>$00,000,000.00</p>
+							</div>
+							<div class="span5">
+								<select>
 									<?php while ($my_query->have_posts()) : $my_query->the_post() ?>
-										<script>
-											var str = "<?php the_title(); ?>"
-											str.replace(/\s+/g, '-').toLowerCase();
-											console.log(str);
-											console.log(|);
-
-										</script>
-										<li>
-										<a href="" data-toggle="tab">
-											<?php the_title(); ?>
-										</a>
-										</li><br>
+										<option>
+												<?php the_title(); ?>
+										</option>
 									<?php endwhile; ?>
-								    <!-- links -->
-								    </ul>
-							    </li>
-						    </ul>
-						<!--  END DROP DOWS LIST -->
+								</select>
+							</div>
+						</div>	
+						<div class="">
+							<img src="http://localhost/wordpress/wp-content/uploads/2013/08/Fiat_palio_adventure_016_Dualogic-.png" alt="">
+						</div>
 
-						<!-- TABS AUTOMOVILES -->
-
-						<div class="tab-content">
-							<?php while ($my_query->have_posts()) : $my_query->the_post() ?>
-								<div class="tab-pane" id="<?php the_title() ?>">
-									<?php the_post_thumbnail('full'); ?>
-								</div>
-							<?php endwhile; ?>
-						</div> <!-- END TABS AUTOMOVILES -->
-					</div> <!-- END DROPDOWNLISTWRAPER -->
-
-				</div> <!-- END SPAN 8 MAIN CONTENT -->
-
-				<div class="span4">
-					<?php while ($my_query->have_posts()) : $my_query->the_post() ?>
-						Value: <p><?php the_field('preciovehiculo'); ?></p>
-					<?php endwhile; ?>
+					</div> <!-- END SPAN 8 MAIN CONTENT -->
+					<div class="span4 cotizar" >
+						<div class="sidebar cotizar">
+							<h1>Calcule  El precio para su vehículo</h1>
+							<hr>	
+							<div class="">
+								<form action="">
+									<div class="row">
+										<label for=" ">Precio del vehículo</label>
+										<input type="text"></div>
+									<div class="row">
+										<label for="">Cuota inicial</label>
+										<input type="text"></div>
+									<div class="row">
+										<label for="">Valor a financiar</label>
+										<input type="text"></div>
+									<div class="row">
+										<label for="">Tasa aproximada</label>
+										<input type="text">
+									</div>
+									<input type="submit" value="Enviar solicitud">
+								</form>
+							</div>
+						</div>
+						<p>Recuerde, Almotores es su concesionario de confianza. 
+*Los datos suministrados por este cotizador permiten dar una referencia sobre el valor posible del vehículo, y por lo tanto no constituyen una oferta final por parte de Almotores. </p>
+					</div>
+					<div class="">
+						<div class="span12"><h2>Resultados de la cotizacion</h2></div>
+						<div class="span12">
+							<table border="0" class="cotizar">
+								<tr>
+									<th>12Cuotas</th>
+									<th>24Cuotas</th>
+									<th>36Cuotas</th>
+									<th>48Cuotas</th>
+									<th>60Cuotas</th>
+									<th>72Cuotas</th>
+								</tr>
+								<tr>
+									<td>$667,359.71</td>
+									<td>$667,359.71</td>
+									<td>$667,359.71</td>
+									<td>$667,359.71</td>
+									<td>$667,359.71</td>
+									<td>$667,359.71</td>
+								</tr>
+							</table>
+						</div>
+					</div>
 				</div>
-
 			</div> <!-- end #main -->
-
 		</div> <!-- end #inner-content -->
-
 	</div> <!-- end #content -->
-
 <?php get_footer(); ?>

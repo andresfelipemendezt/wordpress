@@ -10,25 +10,34 @@
 			<div id="main" class=" first clearfix row" role="main">
 
 				<div class="span8">
-					<?php the_title(); ?>
+					<h1><?php the_title(); ?></h1>
 					<?php the_content(); ?>
 					<hr>
-				 	<h1>Información personal</h1>
-				 	<div class="row">
-
+					<h1>Información personal</h1>
+					<div class="">
 						<?php echo do_shortcode ('[contact-form-7 id="461" title="Contacto"]'); ?>
-				 	</div>
+					</div>
 				</div>
+
+<link rel="stylesheet" href="../static/stylesheets/bootstrap-switch.css" />
+ <script src="../static/js/bootstrap-switch.js"></script>
+
 
 				<div class="span4 sidebar">
 					<h3>NUESTRA SEDE EN CALI</h3>
 					<hr>
-					<?php the_field('direccion'); ?>
-					<p class="rojo">
+					<div class="direccion">
+						<?php the_field('direccion'); ?>
+					</div>
+					<div class="telefono">
 						<?php the_field('telefono'); ?>
-					</p>
-					<?php the_field('callcenter'); ?>
-					<div id="map-canvas"></div>
+					</div>
+					<div class="callcenter">
+						<?php the_field('callcenter'); ?>
+					</div>
+					<div class="nuestrasede">
+						<div id="map-canvas"></div>
+					</div>
 				</div>
 
 			</div> <!-- end #main -->

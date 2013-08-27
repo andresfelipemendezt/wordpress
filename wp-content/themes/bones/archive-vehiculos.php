@@ -1,47 +1,62 @@
 <?php get_header(); ?>
-			<div id="content">
-				<div id="inner-content" class="wrap clearfix">
-					<div id="main" class="eightcol first clearfix row" role="main">
-						<h1 class="archive-titl"e><?php post_type_archive_title(); ?></h1>
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-							<header class="article-header">
-								<h3 class="h2">
-									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-								</h3>
-
-								<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"> <?php the_post_thumbnail('full'); ?> </a>
-
-							</header> <!-- end article header -->
-							<section class="entry-content clearfix">
-								<?php the_excerpt(); ?>
-							</section> <!-- end article section -->
-						</article> <!-- end article -->
-						<?php endwhile; ?>
-							<?php if (function_exists('bones_page_navi')) { ?>
-									<?php bones_page_navi(); ?>
-							<?php } else { ?>
-								<nav class="wp-prev-next">
-									<ul class="clearfix">
-										<li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "bonestheme")) ?></li>
-										<li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "bonestheme")) ?></li>
-									</ul>
-								</nav>
-							<?php } ?>
-						<?php else : ?>
-								<article id="post-not-found" class="hentry clearfix">
-									<header class="article-header">
-										<h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
-									</header>
-									<section class="entry-content">
-										<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
-									</section>
-									<footer class="article-footer">
-											<p><?php _e("This is the error message in the custom posty type archive template.", "bonestheme"); ?></p>
-									</footer>
-								</article>
-						<?php endif; ?>
-					</div> <!-- end #main -->
-				</div> <!-- end #inner-content -->
-			</div> <!-- end #content -->
+<?php $my_query = new WP_Query('post_type=vehiculos'); ?>
+<?php $query_automovil = new WP_Query('Tipo-de-vehiculo=automovil'); ?>
+<?php $query_utilitarios = new WP_Query('Tipo-de-vehiculo=utilitarios'); ?>
+<?php $query_taxi = new WP_Query('Tipo-de-vehiculo=taxi'); ?>
+	<div id="content">
+		<div id="inner-content" class="wrap clearfix">
+			<div id="main" class="row" role="main">
+				<div class="span3 sidebar listcars">
+					<?php while ($my_query->have_posts()) : $my_query->the_post() ?>
+						<a href="<?php the_permalink() ?>">
+							<?php the_title(); ?>
+						</a><br>
+					<?php endwhile; ?>
+				</div>
+				<div class="span9 archive">
+					<h1>Automoviles</h1>
+					<div class="automoviles">
+					<?php while ($query_automovil->have_posts()) : $query_automovil->the_post() ?>
+						<div class="thumb">
+							<a class="archive" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+								<?php the_post_thumbnail('full'); ?>
+							</a>
+							<a href="<?php the_permalink() ?>">
+								<h2> <?php the_title(); ?></h2>
+							</a>
+						</div>
+					<?php endwhile; ?>
+					</div>
+					<h1>Utillitarios</h1>
+					<div class="automoviles">
+						
+					<?php while ($query_utilitarios->have_posts()) : $query_utilitarios->the_post() ?>
+						<div class="thumb">
+							<a class="archive" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+								<?php the_post_thumbnail('full'); ?>
+							</a>
+							<a href="<?php the_permalink() ?>">
+								<h2><?php the_title(); ?></h2>
+							</a>
+						</div>
+					<?php endwhile; ?>
+					</div>
+					<h1>Taxis</h1>
+					<div class="automoviles">
+						
+					<?php while ($query_taxi->have_posts()) : $query_taxi->the_post() ?>
+						<div class="thumb">
+							<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+								<?php the_post_thumbnail('full'); ?>
+							</a>
+							<a href="<?php the_permalink() ?>">
+								<?php the_title(); ?>
+							</a><br>
+						</div>
+					<?php endwhile; ?>
+					</div>
+				</div>
+			</div> <!-- end #main -->
+		</div> <!-- end #inner-content -->
+	</div> <!-- end #content -->
 <?php get_footer(); ?>

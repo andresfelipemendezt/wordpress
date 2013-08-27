@@ -32,6 +32,10 @@
 .bx-wrapper .bx-viewport {
 	/*left: -5px;*/
 	z-index: 3;
+	margin: 0 auto;
+}
+.bx-wrapper img {
+	margin: 0 auto;
 }
 
 .bx-wrapper .bx-pager,
@@ -190,4 +194,14 @@
 	display: block;
 	font-size: .85em;
 	padding: 10px;
+}
+
+.carroscoloreswraper {
+   display: table;
+   width: 100%;
+}
+.carrocolores_colores{
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
 }

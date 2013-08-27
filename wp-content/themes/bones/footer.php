@@ -31,6 +31,7 @@
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/bootstrap.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/bootstrap-switch.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/library/js/jquery.bxslider.min.js"></script>
 
 		<script>
@@ -44,13 +45,16 @@
 					adaptiveHeight: true,
 					prevSelector: '.vehiculos',
 					nextSelector: '.vehiculos'
+				});
 
+				j('.equipamiento').bxSlider({
+			  		slideSelector: '.slide',
+			  		pager: false,
+			  		sliderWidth:300
 				});
 
 				j('.bannerindex').bxSlider({
-			  		slideMargin: 0,
-			  		adaptiveHeight: true,
-			  		pagerCustom: 'li'
+			  		adaptiveHeight: true
 				});
 
 				j('.footerslider').bxSlider({
@@ -59,11 +63,12 @@
   					slideWidth: 300,
   					adaptiveHeight: true,
   					slideMargin: 20,
-
 				});
 
 			    j('.carrocolores').bxSlider({
 					auto: false,
+					speed: 1,
+					controls: false,
 			        autoControls: true,
 				  	pagerCustom: '.carrocolores_colores'
 				});
@@ -77,14 +82,12 @@
 					e.preventDefault();
 					j(this).tab('show');
 				});
-
-				j('.dropdownlisrwraper .carros a').click(function (e) {
-					e.preventDefault();
-					j(this).tab('show');
+				j('#scrollspy').scrollspy();
+				j("#toTop").click(function () {
+					j("html, body").animate({scrollTop: 0}, 1000);
 				});
-				j('.dropdownlisrwraper .tab-content .tab-pane:first-child').addClass('active');
-
 			});
+			<?php if($value = get_post_meta($post->ID, "google_maps", true)): ?>
 			var map;
 			var myLatLang = new google.maps.LatLng(<?php  $location = get_field('google_maps'); echo $location['coordinates']; ?>);
 			function initialize() {
@@ -101,7 +104,7 @@
 		  		});
 			};
 			google.maps.event.addDomListener(window, 'load', initialize);
-
+			<?php endif; ?>
 
 		</script>
 

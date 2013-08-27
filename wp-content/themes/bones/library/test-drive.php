@@ -6,8 +6,10 @@
 			<?php while (have_posts()) : the_post(); ?>
 			<div id="main" class=" first clearfix" role="main">
 				<h1><?php the_title(); ?></h1>
+				<hr>
 				<div class="row">
 					<div class="span8">
+						<h2>Solicita un test drive</h2>
 						<?php the_content(); ?>
 						<?php echo do_shortcode('[contact-form-7 id="452" title="Test drive"]');  ?>
 					</div>
