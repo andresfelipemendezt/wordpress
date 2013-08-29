@@ -672,7 +672,7 @@ probably best not to use it. I mean, were you going to anyway? */
 BUTTONS
 *********************/
 .button, .button:visited {
-  font-family: "Helvetica Neue", Helvetica, "Myriad,Myriad Pro", sans-serif;
+  font-family: "Myriad,Myriad Pro", sans-serif;
   border: 1px solid #b5b5b5;
   border-top-color: #c4c4c4;
   border-left-color: #c4c4c4;
@@ -762,6 +762,26 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
+.row .span1 img,
+.row .span2 img,
+.row .span3 img,
+.row .span4 img,
+.row .span5 img,
+.row .span6 img,
+.row .span7 img,
+.row .span8 img,
+.row .span9 img,
+.row .span10 img,
+.row .span11 img,
+header.article-header img,
+.row .span12 img {
+  width: 100%;
+}
+
+#main row {
+  width: auto !important;
+}
+
 /*********************
 GENERAL STYLES
 *********************/
@@ -774,7 +794,7 @@ GENERAL STYLES
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, "Myriad,Myriad Pro", sans-serif;
+  font-family: "Myriad,Myriad Pro", sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #828282;
@@ -791,15 +811,19 @@ hr {
   border: 1px solid #c9c9c9;
 }
 
+#main {
+  position: relative;
+}
+
 /*********************
 BREAD CRUMBS
 *********************/
 .breadcrumbs {
-  padding-top: 25px;
+  padding-top: 10px;
   padding-bottom: 10px;
   width: 960px;
   margin: 0 auto;
-  font-size: 13px !important;
+  font-size: 11px !important;
   text-transform: uppercase;
   background-color: #fff;
 }
@@ -917,7 +941,7 @@ a:link, a:visited:link {
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-family: "Helvetica Neue", Helvetica, "Myriad,Myriad Pro", sans-serif;
+  font-family: "Myriad,Myriad Pro", sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 500;
   /*
@@ -931,17 +955,17 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 }
 
 nav a {
-  font-family: "Helvetica Neue", Helvetica, "Myriad,Myriad Pro", sans-serif;
+  font-family: "Myriad,Myriad Pro", sans-serif;
 }
 
 h1, .h1 {
   font-size: 2.5em;
   line-height: 1.333em;
-  color: #990b0a;
+  color: #b81816;
 }
 
 h2, .h2 {
-  color: #990b0a;
+  color: #b81816;
   font-size: 1.75em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
@@ -954,6 +978,13 @@ h3, .h3 {
 h4, .h4 {
   font-size: 1.1em;
   font-weight: 700;
+}
+
+h4.negativo {
+  position: absolute;
+  bottom: -210px;
+  left: 9px;
+  color: #fff;
 }
 
 h5, .h5 {
@@ -994,7 +1025,7 @@ HEADER STYLES
   position: relative;
   left: 50%;
   margin-left: -71.5px;
-  top: 18px;
+  top: 12px;
 }
 
 /*********************
@@ -1050,7 +1081,8 @@ nav ul#menu-principal {
   z-index: 999;
 }
 nav ul#menu-principal a {
-  padding: 10px 10px;
+  padding: 15px 11px;
+  font-size: 12px;
 }
 nav ul#menu-principal a:hover {
   background-image: -moz-linear-gradient(50% 0% -180deg, #c61d30 0%, #6e0c0b 100%);
@@ -1089,7 +1121,6 @@ nav li a {
   text-decoration: none;
   border-bottom: 1px solid #ccc;
   font-size: 13px;
-  top: 7px;
   position: relative;
 }
 nav li a[title="homelogo"]:hover {
@@ -1115,7 +1146,7 @@ nav li ul.children li a:focus {
 /* end .nav */
 .slide {
   position: relative;
-  height: 230px;
+  height: 192px;
 }
 .slide img {
   position: absolute;
@@ -1161,7 +1192,7 @@ SIDEBARS STYLES
   color: #676767;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   position: relative;
 }
 .listcars a:after {
@@ -1217,7 +1248,7 @@ SIDEBARS STYLES
   background: url("../images/sidebarsprites.png") no-repeat;
 }
 .sidebar .telefono {
-  color: #9d1a18;
+  color: #b81816;
 }
 .sidebar .direccion:after {
   background-position: 0 -17px;
@@ -1266,6 +1297,11 @@ SIDEBARS STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.descripcioncopy hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 #descripccion {
   margin-top: 40px;
 }
@@ -1510,7 +1546,7 @@ tr:nth-child(2n+1) {
   background-image: linear-gradient(180deg, #2e2e2e 0%, #0c0c0c 100%);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff2e2e2e,endColorstr=#ff0c0c0c,GradientType=0)";
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff2e2e2e,endColorstr=#ff0c0c0c,GradientType=0);
-  border-bottom: 3px solid #9d1a18;
+  border-bottom: 3px solid #b81816;
   border-radius: 10px;
 }
 .clientewraper ul.nav li {
@@ -1555,10 +1591,11 @@ FICHA TECNICA
   border-bottom: 1px #881615 solid;
 }
 .fichatecnicawraper ul li a {
-  padding: 15px;
+  padding: 5px 15px;
   display: block;
   width: 100%;
-  height: 50px;
+  height: 30px;
+  text-transform: capitalize;
 }
 .fichatecnicawraper ul li a:hover {
   background-color: transparent;
@@ -1589,27 +1626,39 @@ FICHA TECNICA
 /******************************************************************
 GALERIA
 ******************************************************************/
+.ancho {
+  height: 100%;
+  width: auto;
+  left: 50%;
+  top: 0;
+}
+
+.alto {
+  height: alto;
+  width: 100%;
+  top: 50%;
+  left: 0;
+}
+
 ul.galeria {
   width: 960px;
   position: relative;
 }
-ul.galeria li {
+ul.galeria a {
   overflow: hidden;
   height: 250px;
   width: 33.33%;
   float: left;
+  position: relative;
 }
-ul.galeria li img {
-  margin: 10px;
-  height: 100% !important;
-  width: auto !important;
+ul.galeria a img {
+  position: absolute;
+  padding: 5px;
 }
-ul.galeria li:first-child,
-ul.galeria li:nth-child(2),
-ul.galeria li:nth-child(3) {
+ul.galeria a:first-child, ul.galeria a:nth-child(2), ul.galeria a:nth-child(3) {
   width: 50%;
 }
-ul.galeria li:first-child {
+ul.galeria a:first-child {
   height: 500px;
 }
 
@@ -1744,6 +1793,21 @@ CUSTOM POST TYPES SLIDERS
 /*********************
 PAGES & CONTENT STYLES
 *********************/
+.quotealign {
+  display: table;
+  width: 100%;
+}
+.quotealign .quote {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.nuestraempresa hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .bannerwraper {
   position: relative;
   background: url(../images/sliderIndexBg.jpg);
@@ -1761,7 +1825,7 @@ PAGES & CONTENT STYLES
 ul.bannerindex {
   margin: 0;
   padding: 0;
-  height: 360px;
+  height: 250px;
   position: relative;
   z-index: 1;
 }
@@ -1777,13 +1841,14 @@ ul.bannerindex img {
   position: relative;
   width: 100%;
   z-index: 2;
-  top: -32px;
+  position: relative;
 }
 .bxsliderwraper h2 {
   text-transform: uppercase;
   text-align: center;
   position: relative;
   color: #686868;
+  z-index: 999;
 }
 .bxsliderwraper h2:after {
   position: absolute;
@@ -1807,6 +1872,21 @@ ul.bannerindex img {
   border-bottom: .5px solid transparent;
   border-right: 560px solid #d6d6d6;
 }
+.bxsliderwraper .bx-wrapper {
+  margin: 0 auto;
+}
+.bxsliderwraper .bx-wrapper .bx-pager {
+  bottom: 0;
+}
+.bxsliderwraper .vehiculos,
+.bxsliderwraper .bx-viewport {
+  top: -30px;
+}
+
+.ajax-loader {
+  width: 0;
+  height: 0;
+}
 
 .bxslider {
   position: relative;
@@ -1819,6 +1899,8 @@ ul.bannerindex img {
 
 a.title {
   text-align: center;
+  font-weight: bold;
+  font-size: 12px;
   position: relative;
   width: 115px;
   display: inline-block;
@@ -1828,6 +1910,19 @@ a.title {
   color: #8c041c;
   vertical-align: top;
   top: 15px;
+  position: relative;
+}
+
+a.title:before {
+  content: '';
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 7px solid #fff;
+  width: 0;
+  height: 0;
+  top: 45px;
+  left: 50px;
 }
 
 a.title:after {
@@ -1888,7 +1983,7 @@ ul.vehiculos:after {
 }
 
 .quote p {
-  font-size: 22px !important;
+  font-size: 16px !important;
   text-transform: uppercase;
 }
 
@@ -1919,8 +2014,11 @@ ul.vehiculos:after {
 }
 .indexcontent h3 {
   font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 15px;
 }
 .indexcontent p {
+  margin-top: 0;
   font-size: 14px;
 }
 
@@ -2198,7 +2296,7 @@ form input[type="submit"] {
   margin-top: 19px;
   height: 29px;
   border-radius: 5px;
-  background-color: #9a2214;
+  background-color: #b81816;
   border: none;
   color: #fff;
   font-weight: bold;

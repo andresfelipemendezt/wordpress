@@ -17,13 +17,13 @@
 							<?php the_content(); ?>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row quotealign">
 						<div class="span6 quote blockquote">
 							<hr>
 							<?php the_field('cita'); ?>
 							<hr>
 						</div>
-						<div class="span6">
+						<div class="span6 nuestraempresa">
 							<!-- <div class="row"> -->
 								<h2>MISIÓN</h2>
 								<hr>

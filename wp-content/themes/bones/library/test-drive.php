@@ -11,6 +11,7 @@
 					<div class="span8">
 						<h2>Solicita un test drive</h2>
 						<?php the_content(); ?>
+						<hr>
 						<?php echo do_shortcode('[contact-form-7 id="452" title="Test drive"]');  ?>
 					</div>
 					<div class="span4 sidebar">

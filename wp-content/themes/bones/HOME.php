@@ -50,6 +50,7 @@
 					</div>
 				</div>
 
+				<h4 class="negativo">Promociones Fiat 2013</h4>
 			</div> <!-- end #main -->
 
 		</div> <!-- end #inner-content -->
@@ -65,6 +66,7 @@
 					<img src=" <?php echo $image['url']; ?> " alt="">
 				</li>
 			<?php endforeach; ?>
+
 		</ul>
 	<?php endif; ?>
 

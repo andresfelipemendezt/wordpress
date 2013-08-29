@@ -10,7 +10,29 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
+.thumb{
 
+}
+.row .span1,
+.row .span2,
+.row .span3,
+.row .span4,
+.row .span5,
+.row .span6,
+.row .span7,
+.row .span8,
+.row .span9,
+.row .span10,
+.row .span11,
+header.article-header,
+.row .span12{
+	img{
+		width: 100%;
+	}
+}
+#main row{
+	width: auto !important;
+}
 /*********************
 GENERAL STYLES
 *********************/
@@ -34,19 +56,21 @@ body {
 	border-bottom:2px solid #c9c9c9;
 	text-transform: uppercase;
 }
-hr{
+hr {
 	border: 1px solid $fiat-gris;
 }
-
+#main{
+	position: relative;
+}
 /*********************
 BREAD CRUMBS
 *********************/
 .breadcrumbs{
-	padding-top: 25px;
+	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 960px;
 	margin: 0 auto;
-	font-size: 13px !important;
+	font-size: 11px !important;
 	text-transform: uppercase;
 	background-color: #fff;
 }
@@ -195,11 +219,11 @@ nav a{
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
-	color:#990b0a;
+	color: $red;
 }
 
 h2, .h2 {
-	color:#990b0a;
+	color: $red;
 	font-size: 1.75em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
@@ -212,6 +236,12 @@ h3, .h3 {
 h4, .h4 {
 	font-size: 1.1em;
 	font-weight: 700;
+}
+h4.negativo{
+	position: absolute;
+	bottom: -210px;
+	left: 9px;
+	color: #fff;
 }
 
 h5, .h5 {
@@ -253,7 +283,7 @@ HEADER STYLES
 		position: relative;
 		left: 50%;
 		margin-left: -71.5px;
-		top: 18px;
+		top: 12px;
 	}
 
 /*********************
@@ -301,7 +331,8 @@ nav {
 		position: relative;
 		z-index: 999;
 		a {
-			padding: 10px 10px;
+			padding: 15px 11px;
+			font-size: 12px;
 		}
 
 		a:hover {
@@ -337,7 +368,6 @@ nav {
 			text-decoration: none;
 			border-bottom: 1px solid #ccc;
 			font-size: 13px;
-			top: 7px;
 			position: relative;
 		}
 		a[title="homelogo"]:hover{
@@ -400,7 +430,7 @@ nav {
 } /* end .nav */
 .slide {
 	position: relative;
-	height: 230px;
+	height: 192px;
 	img {
 		position: absolute;
 		width: 100%;
@@ -448,7 +478,7 @@ SIDEBARS STYLES
 		color: #676767;
 		text-transform: uppercase;
 		font-weight: bold;
-		font-size: 14px;
+		font-size: 12px;
 		position: relative;
 	}
 	a:after{
@@ -556,6 +586,12 @@ SIDEBARS STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.descripcioncopy{
+	hr{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+}
 #descripccion{
 	margin-top: 40px;
 	img{
@@ -910,10 +946,11 @@ FICHA TECNICA
 			display: block;
 			border-bottom: 1px #881615 solid;
 			a{
-				padding: 15px;
+				padding: 5px 15px;
 				display: block;
 				width: 100%;
-				height: 50px;
+				height: 30px;
+				text-transform: capitalize;
 			}
 			a:hover{
 				background-color: transparent;
@@ -952,27 +989,40 @@ FICHA TECNICA
 /******************************************************************
 GALERIA
 ******************************************************************/
+
+.ancho{
+	height: 100%;
+	width: auto;
+    left: 50%;
+	top: 0;
+}
+.alto{
+	height: alto;
+	width: 100%;
+	top: 50%;
+	left: 0;
+}
 ul.galeria{
 	width: 960px;
 	position: relative;
-	li{
+	a{
 		overflow: hidden;
 		height: 250px;
 		width: 33.33%;
 		float: left;
+		position: relative;
 		img{
-			margin: 10px;
-			height: 100% !important;
-			width: auto !important;
+			position: absolute;
+		    padding: 5px;
 		}
-	}
-	li:first-child,
-	li:nth-child(2),
-	li:nth-child(3){
-		width: 50%;
-	}
-	li:first-child{
-		height: 500px;
+		&:first-child,
+		&:nth-child(2),
+		&:nth-child(3){
+			width: 50%;
+		}
+		&:first-child{
+			height: 500px;
+		}
 	}
 }
 
@@ -1107,11 +1157,27 @@ CUSTOM POST TYPES SLIDERS
 	}
 	h2{
 		background:#f2f2f2;
+
 	}
 }
 /*********************
 PAGES & CONTENT STYLES
 *********************/
+.quotealign{
+	display: table;
+   	width: 100%;
+   	.quote{
+		display: table-cell;
+	   text-align: center;
+	   vertical-align: middle;
+   }
+}
+.nuestraempresa{
+	hr{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+}
 .bannerwraper{
 	position: relative;
 	background:url(../images/sliderIndexBg.jpg);
@@ -1129,7 +1195,7 @@ PAGES & CONTENT STYLES
 ul.bannerindex{
 	margin: 0;
 	padding: 0;
-	height: 360px;
+	height: 250px;
 	position: relative;
 	z-index: 1;
 	li,img {
@@ -1145,12 +1211,14 @@ ul.bannerindex{
 	position: relative;
 	width: 100%;
 	z-index: 2;
-	top: -32px;
+	position: relative;
+
 	h2{
 		text-transform: uppercase;
 		text-align: center;
 		position: relative;
 		color:#686868;
+		z-index: 999;
 	}
 	h2:after{
 		position: absolute;
@@ -1174,6 +1242,20 @@ ul.bannerindex{
 		border-bottom: .5px solid transparent;
 		border-right: 560px solid #d6d6d6;
 	}
+	.bx-wrapper{
+		margin: 0 auto;
+		.bx-pager{
+			bottom: 0;
+		}
+	}
+	.vehiculos,
+	.bx-viewport{
+	top: -30px;
+	}
+}
+.ajax-loader{
+	width: 0;
+	height: 0;
 }
 .bxslider{
 
@@ -1187,6 +1269,9 @@ ul.bannerindex{
 }
 a.title{
 	text-align:center;
+	font-weight: bold;
+	// font-family: arial;
+	font-size: 12px;
 	position: relative;
 	width: 115px;
 	display: inline-block;
@@ -1196,6 +1281,18 @@ a.title{
 	color:#8c041c;
 	vertical-align:top;
 	top: 15px;
+	position: relative;
+}
+a.title:before{
+	content:'';
+	position: absolute;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 7px solid #fff;
+	width: 0;
+	height: 0;
+	top: 45px;
+	left: 50px;
 }
 a.title:after{
 	position: absolute;
@@ -1253,7 +1350,7 @@ ul.vehiculos:after{
 }
 
 .quote p{
-	font-size: 22px !important;
+	font-size: 16px !important;
 	text-transform: uppercase;
 }
 .blockquote{
@@ -1281,8 +1378,11 @@ ul.vehiculos:after{
 	}
 	h3{
 		font-size: 30px;
+		margin-bottom: 0;
+		margin-top: 15px;
 	}
 	p {
+		margin-top: 0;
 		font-size: 14px;
 	}
 }
@@ -1690,7 +1790,7 @@ form{
 		margin-top: 19px;
 		height: 29px;
 		border-radius: 5px;
-		background-color: #9a2214;
+		background-color: $red;
 		border: none;
 		color: #fff;
 		font-weight: bold;

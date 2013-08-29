@@ -34,7 +34,7 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/bootstrap.min.css">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/bootstrap-switch.css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/bootstrap-lightbox.min.css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/jquery.bxslider.css">
 
 

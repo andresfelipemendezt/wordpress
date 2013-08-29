@@ -165,7 +165,7 @@ probably best not to use it. I mean, were you going to anyway? */
 BUTTONS
 *********************/
 .button, .button:visited {
-  font-family: "Helvetica Neue", Helvetica, "Myriad,Myriad Pro", sans-serif;
+  font-family: "Myriad,Myriad Pro", sans-serif;
   border: 1px solid #b5b5b5;
   border-top-color: #c4c4c4;
   border-left-color: #c4c4c4;

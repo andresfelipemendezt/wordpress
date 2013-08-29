@@ -10,7 +10,7 @@
 						<img src="<?php the_field('imagen_header'); ?>" alt="" />
 						<ul class="scrollspy span3 nav" id="scrollspy">
 		                	<li class="active"><a href="#descripccion">Descripción</a></li>
-		                    <li class=""><a href="#galeria">Galería</a></li>
+		                    <li class=""><a href="#galleria">Galería</a></li>
 		                    <li class=""><a href="#colores">Colores</a></li>
 		                    <li class=""><a href="#fichatecnica">Ficha ténica</a></li>
 		                </ul>
@@ -30,25 +30,38 @@
 					<?php endif; ?>
 
 					<?php if($value = get_post_meta($post->ID, "galeria", true)): ?>
-						<div class="galeria row" id="galeria">
+						<div class="galeria row span12" id="galleria">
 							<h1>Galería</h1>
 							<hr>
 							<?php
+
 							 $images = get_field('galeria');
 							 if( $images ): ?>
-							 <ul class="galeria ">
-								<?php foreach( $images as $image): ?>
-									<li>
-										<img src=" <?php echo $image['url']; ?> " alt="">
-									</li>
-								<?php endforeach; ?>
-							 </ul>
+							 <ul class="galeria" id="demoLightbox" ><!--
+									<?php $i = 0; ?>
+								--><?php foreach( $images as $image): ?><!--
+									--><a data-toggle="lightbox" href="#demoLightbox<?php echo $i; ?>" class="galeria">
+										<img src="<?php echo $image['url']; ?> ">
+									</a><!--
+									<?php $i++; ?>
+								--><?php endforeach; ?><!--
+							 --></ul>
+								<?php $i = 0; ?>
+							<?php foreach( $images as $image): ?>
+							<div id="demoLightbox<?php echo $i; ?>" class="lightbox hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+								<div class="lightbox-content">
+								 	<img src="<?php echo $image['url']; ?> ">
+								</div>
+							</div>
+						 	<?php $i++; ?>
+							<?php endforeach; ?>
+
 							<?php endif; ?>
 						</div>
 					<?php endif; ?>
 
-					<?php if($value = get_post_meta($post->ID, "galeria", true)): ?>
-						<div class="coloreswraper row" id="colores">
+					<?php if($value = get_post_meta($post->ID, "carros", true)): ?>
+						<div class="coloreswraper row span12" id="colores">
 							<h1>Color</h1>
 							<hr>
 							<?php
