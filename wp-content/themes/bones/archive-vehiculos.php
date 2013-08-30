@@ -10,52 +10,65 @@
 					<?php while ($my_query->have_posts()) : $my_query->the_post() ?>
 						<a href="<?php the_permalink() ?>">
 							<?php the_title(); ?>
-						</a><br>
+						</a>
 					<?php endwhile; ?>
 				</div>
 				<div class="span9 archive">
 					<h1>Automoviles</h1>
-					<div class="automoviles">
+					<div class="automoviles"><!--
+
 					<?php while ($query_automovil->have_posts()) : $query_automovil->the_post() ?>
-						<div class="thumb">
+
+					 --><div class="thumb">
 							<a class="archive" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
 								<?php the_post_thumbnail('full'); ?>
 							</a>
 							<a href="<?php the_permalink() ?>">
 								<h2> <?php the_title(); ?></h2>
 							</a>
-						</div>
+						</div><!--
+
 					<?php endwhile; ?>
-					</div>
+
+					--></div>
+
 					<h1>Utillitarios</h1>
-					<div class="automoviles">
+					<div class="automoviles"><!--
 
 					<?php while ($query_utilitarios->have_posts()) : $query_utilitarios->the_post() ?>
-						<div class="thumb">
+
+					 --><div class="thumb">
 							<a class="archive" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
 								<?php the_post_thumbnail('full'); ?>
 							</a>
 							<a href="<?php the_permalink() ?>">
 								<h2><?php the_title(); ?></h2>
 							</a>
-						</div>
-					<?php endwhile; ?>
-					</div>
-					<h1>Taxis</h1>
-					<div class="automoviles">
-					<?php while ($query_taxi->have_posts()) : $query_taxi->the_post() ?>
-						<div class="thumb">
+						</div><!--
 
+					<?php endwhile; ?>
+
+					--></div>
+
+					<h1>Taxis</h1>
+					<div class="automoviles"><!--
+
+					<?php while ($query_taxi->have_posts()) : $query_taxi->the_post() ?>
+
+					 --><div class="thumb">
 							<a class="archive" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
 								<?php the_post_thumbnail('full'); ?>
 							</a>
 							<a href="<?php the_permalink() ?>">
 								<h2><?php the_title(); ?></h2>
 							</a><br>
-						</div>
+						</div><!--
+
 					<?php endwhile; ?>
-					</div>
+
+					--></div>
 				</div>
+
 			</div> <!-- end #main -->
 		</div> <!-- end #inner-content -->
 	</div> <!-- end #content -->

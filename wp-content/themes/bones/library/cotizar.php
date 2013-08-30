@@ -24,16 +24,16 @@
 									<?php endwhile; ?>
 								</select>
 							</div>
-						</div>	
+						</div>
 						<div class="">
-							<img src="http://localhost/wordpress/wp-content/uploads/2013/08/Fiat_palio_adventure_016_Dualogic-.png" alt="">
+							<img src="http://existaya.com/clientes/fiat/wp-content/uploads/2013/08/Fiat_palio_adventure_016_Dualogic-.jpg" alt="">
 						</div>
 
 					</div> <!-- END SPAN 8 MAIN CONTENT -->
 					<div class="span4 cotizar" >
 						<div class="sidebar cotizar">
 							<h1>Calcule  El precio para su vehículo</h1>
-							<hr>	
+							<hr>
 							<div class="">
 								<form action="">
 									<div class="row">
@@ -53,7 +53,7 @@
 								</form>
 							</div>
 						</div>
-						<p>Recuerde, Almotores es su concesionario de confianza. 
+						<p>Recuerde, Almotores es su concesionario de confianza.
 *Los datos suministrados por este cotizador permiten dar una referencia sobre el valor posible del vehículo, y por lo tanto no constituyen una oferta final por parte de Almotores. </p>
 					</div>
 					<div class="">

@@ -14,14 +14,16 @@
 							<img src="<?php the_field('imagen_nuestra_empresa')?> " alt="">
 						</div>
 						<div class="span8 quote nuestraempresa">
+							<hr>
 							<?php the_content(); ?>
+							<hr>
 						</div>
 					</div>
 					<div class="row quotealign">
 						<div class="span6 quote blockquote">
-							<hr>
+							<hr class="openquote">
 							<?php the_field('cita'); ?>
-							<hr>
+							<hr class="closequote">
 						</div>
 						<div class="span6 nuestraempresa">
 							<!-- <div class="row"> -->

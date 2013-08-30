@@ -30,7 +30,7 @@
 					<?php endif; ?>
 
 					<?php if($value = get_post_meta($post->ID, "galeria", true)): ?>
-						<div class="galeria row span12" id="galleria">
+						<div class="galeria" id="galleria">
 							<h1>Galería</h1>
 							<hr>
 							<?php
@@ -161,6 +161,7 @@
 								<?php the_field('prestaciones'); ?>
 							</div>
 						</div>
+						<a class="download" href="<?php the_field('pdf'); ?>" target="_blank"></a>
 					</div>
 					<div class="row span12 sliderequipamiento">
 						<h1>Equipamiento</h1>

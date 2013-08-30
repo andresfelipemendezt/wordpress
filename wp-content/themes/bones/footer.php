@@ -92,16 +92,25 @@
 
 			var length = j('ul.galeria a').length;
 			for (var i = 1; i < length+1; i++) {
-				var imagen = j('ul.galeria a:nth-child('+i+') img'),
-					width = imagen.width();
-					height = imagen.height();
-					if ( width > height ) {
+				var contenedor = j('ul.galeria a:nth-child('+i+')'),
+					imagen  = contenedor.children('img'),
+					width   = imagen.width(),
+					height  = imagen.height(),
+					iratio  = width/height,
+					cwidth  = contenedor.width(),
+					cheigth = contenedor.height(),
+					cratio  = cwidth/cheigth;
+
+					console.log(cratio);
+					console.log(iratio);
+
+					if ( cratio < iratio ) {
 						imagen.addClass('ancho');
 						mitad = imagen.width()/-2;
 						imagen.css('margin-left', mitad+'px')
 					} else {
 						imagen.addClass('alto');
-						mitad = imagen.alto()/-2;
+						mitad = imagen.height()/-2;
 						imagen.css('margin-top', mitad+'px')
 					};
 			};
